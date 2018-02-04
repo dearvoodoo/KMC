@@ -1,0 +1,17 @@
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+#                                                                                                           #
+#                                                VOODOO SCRIPT                                              #
+#                                                                                                           #
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+site_command:
+    type: command
+    debug: false
+    name: site
+    description: Give le lien du site
+    usage: /site
+    permission: custom_commands.site
+    permission message: "<&c>Vous n'avez pas la permission d'utiliser cette commande"
+    allowed help:
+    - determine <player.has_permission[custom_commands.site]]>
+    script:
+        - narrate "<&8><&l>[<&9><&l>KMC<&8><&l>]<&r> <&6>Clique sur le lien pour voir le site du serveur KMC <&a><&n>http://kmc.dear-voodoo.com/"

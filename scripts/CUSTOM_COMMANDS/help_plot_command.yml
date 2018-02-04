@@ -1,0 +1,26 @@
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+#                                                                                                           #
+#                                                VOODOO SCRIPT                                              #
+#                                                                                                           #
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+help_plot_command:
+    type: command
+    debug: false
+    name: help-plot
+    description: Give l'aide de plot
+    usage: /help-plot
+    permission: custom_commands.help-plot
+    permission message: "<&c>Vous n'avez pas la permission d'utiliser cette commande"
+    allowed help:
+    - determine <player.has_permission[custom_commands.help-plot]>
+    script:
+        - narrate "<&8><&m><&l>==========<&9><&m><&l>======<&3><&m><&l>=============<&9><&m><&l>======<&8><&m><&l>=========="
+        - narrate "<&e><&l>                        Besoin d'aide"
+        - narrate "<&8><&m><&l>==========<&9><&m><&l>======<&3><&m><&l>=============<&9><&m><&l>======<&8><&m><&l>=========="
+        - narrate "<&e>/plot claim <&7>Prendre le terrain sur lequel vous vous trouvez"
+        - narrate "<&e>/plot auto <&7>Prendre un terrain aléatoire"
+        - narrate "<&e>/plot trust <&a>[Joueur] <&7>Autorise <&a>[Joueur] <&7>à build sur votre terrain."
+        - narrate "<&e>/plot add <&a>[Joueur] <&7>Autorise <&a>[Joueur] <&7>à build sur votre terrain pendant que vous êtes <&l>en ligne<&r><&7>."
+        - narrate "<&e>/plot deny <&a>[Joueur] <&7>Refuse à <&a>[Joueur] <&7>de build sur le terrain"
+        - narrate "<&e>/plot sethome <&7>Place le point de téléportation de votre terrain"
+        - narrate "<&b>Toutes les commandes dispo sur le site de KMC <&e>/site"

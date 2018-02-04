@@ -1,0 +1,17 @@
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+#                                                                                                           #
+#                                                VOODOO SCRIPT                                              #
+#                                                                                                           #
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+menu_command:
+    type: command
+    debug: false
+    name: menu
+    description: Ouvre le menu KMC
+    usage: /menu
+    permission: custom_commands.menu
+    permission message: "<&c>Vous n'avez pas la permission d'utiliser cette commande"
+    allowed help:
+    - determine <player.has_permission[custom_commands.menu]>
+    script:
+        - inventory open d:in@main_menu

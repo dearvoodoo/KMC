@@ -1,0 +1,17 @@
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+#                                                                                                           #
+#                                                VOODOO SCRIPT                                              #
+#                                                                                                           #
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+help_commands_command:
+    type: command
+    debug: false
+    name: help-commands
+    description: Give l'aide de commandes
+    usage: /help-commands
+    permission: custom_commands.help-commands
+    permission message: "<&c>Vous n'avez pas la permission d'utiliser cette commande"
+    allowed help:
+    - determine <player.has_permission[custom_commands.help-commands]>
+    script:
+        - narrate "<&8><&l>[<&9><&l>KMC<&8><&l>]<&r> <&6>Clique sur le lien pour voir le site du serveur KMC <&a><&n>http://kmc.dear-voodoo.com/pages/commands.html"

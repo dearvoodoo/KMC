@@ -1,0 +1,17 @@
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+#                                                                                                           #
+#                                                VOODOO SCRIPT                                              #
+#                                                                                                           #
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+menu_visite_command:
+    type: command
+    debug: false
+    name: visite
+    description: Ouvre le menu de la visite
+    usage: /visite
+    permission: custom_commands.menu
+    permission message: "<&c>Vous n'avez pas la permission d'utiliser cette commande"
+    allowed help:
+    - determine <player.has_permission[custom_commands.menu]>
+    script:
+        - inventory open d:in@player_menu_01
