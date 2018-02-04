@@ -10,7 +10,7 @@ player_menu_02:
     - "[i@time_menu_item] [i@main_menu_vitre11] [] [] [] [] [] [i@main_menu_vitre15] [i@warp_warp_menu_item]"
     - "[i@gamemode_menu_item] [i@main_menu_vitre14] [] [] [] [] [] [i@main_menu_vitre10] [i@world_menu_item]"
     - "[i@main_menu_vitre1] [i@main_menu_vitre2] [i@main_menu_vitre3] [i@main_menu_vitre4] [i@main_menu_vitre5] [i@main_menu_vitre6] [i@main_menu_vitre7] [i@main_menu_vitre8] [i@main_menu_vitre9]"
-    - "[] [] [] [i@01_back_arrow] [i@main_menu_fermer] [] [] [] [i@warp_players_item]"
+    - "[] [] [] [i@01_back_arrow] [i@main_menu_fermer] [i@pm03_arrow] [] [] [i@warp_players_item]"
 ##################################################################################################################################################################################################################  
 #pm_:
 #    type: item
@@ -167,6 +167,10 @@ player_menu_02:
     type: item
     material: arrow
     display name: <&e>Page Precedente
+pm03_arrow:
+    type: item
+    material: arrow
+    display name: <&e>Page Suivante
 ##################################################################################################################################################################################################################
 player_menu_02_menu_handler:
     type: world
@@ -220,6 +224,8 @@ player_menu_02_menu_handler:
 
         on player clicks 01_back_arrow in player_menu_02:
         - inventory open d:in@player_menu_01
+        on player clicks pm03_arrow in player_menu_02:
+        - inventory open d:in@player_menu_03
         on player clicks warp_players_item in player_menu_02:
         - determine cancelled
 ##################################################################################################################################################################################################################
