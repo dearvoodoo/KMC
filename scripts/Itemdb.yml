@@ -1,4 +1,8 @@
 #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+#                                                                                                           #
+#                                                VOODOO SCRIPT                                              #
+#                                                                                                           #
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
 # Faire la commande "/itemdb" pour avoir le nom de l'item, l'ID, le data, la commande de give et le dItem   #
 #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
 Itemdb Command: 
@@ -6,7 +10,7 @@ Itemdb Command:
   events: 
     on itemdb command:
     - ^if !<player.is_op> {
-      - ^narrate "<&f>You must be op to use this command."
+      - ^narrate "<&f>Vous devez être OP pour faire cette commande."
       - determine fulfilled
       - queue clear
       }
