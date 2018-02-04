@@ -1,3 +1,9 @@
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+#                                                                                                           #
+#                                                VOODOO SCRIPT                                              #
+#                                                                                                           #
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+
 denizen_reload_scripts:
     type: command
     debug: false
@@ -7,10 +13,10 @@ denizen_reload_scripts:
     permission: denizencmds.reload
     permission message: "<&c>Vous n'avez pas la permission d'utiliser cette commande"
     allowed help:
-    - determine <player.has_permission>
+    - determine <player.has_permission[denizencmds.reload]>
     script:
         - execute as_op "denizen reload scripts"
-		
+	
 denizen_debug_r:
     type: command
     debug: false
@@ -20,10 +26,10 @@ denizen_debug_r:
     permission: denizencmds.debugr
     permission message: "<&c>Vous n'avez pas la permission d'utiliser cette commande"
     allowed help: 
-    - determine <player.has_permission>
+    - determine <player.has_permission[denizencmds.debugr]>
     script:
         - execute as_op "denizen debug -r"
-		
+	
 denizen_submit:
     type: command
     debug: false
@@ -33,6 +39,6 @@ denizen_submit:
     permission: denizencmds.submit
     permission message: "<&c>Vous n'avez pas la permission d'utiliser cette commande"
     allowed help: 
-    - determine <player.has_permission>
+    - determine <player.has_permission[denizencmds.submit]>
     script:
         - execute as_op "denizen submit"
