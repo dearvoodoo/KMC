@@ -1,0 +1,6 @@
+"NoMelt":
+    type: world
+    debug: false
+    events:
+        on ice fades:
+            - determine CANCELLED

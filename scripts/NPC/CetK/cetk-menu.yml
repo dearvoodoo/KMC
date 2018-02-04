@@ -1,0 +1,71 @@
+#     #     #     #     #     #     #     #     #     #     #     #     #     #     #
+   
+#                                       MENU                                        #
+
+#     #     #     #     #     #     #     #     #     #     #     #     #     #     #
+
+cetk_menu:
+    type: inventory
+    debug: true
+    title: Collins & Kosuke
+    size: 9 
+    slots:
+    - "[] [] [] [i@cetk_twitter] [i@cetk_youtube] [i@cetk_insta] [] [] []"
+    
+
+#     #     #     #     #     #     #     #     #     #     #     #     #     #     #
+   
+#                                       ITEM                                        #
+
+#     #     #     #     #     #     #     #     #     #     #     #     #     #     #
+
+cetk_twitter:
+    type: item
+    material: human_skull[skull_skin=11fce6c7-71ad-464e-98e7-c8e579de4758|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzY4NWEwYmU3NDNlOTA2N2RlOTVjZDhjNmQxYmEyMWFiMjFkMzczNzFiM2Q1OTcyMTFiYjc1ZTQzMjc5In19fQ==]
+    display name: <&b>Twitter
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Twitter de Collins & Kosuke"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+cetk_youtube:
+    type: item
+    material: human_skull[skull_skin=45162661-7a22-43bf-b768-33c9b0d3b7da|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTY3OWQ2MzBmODUxYzU4OTdkYTgzYTY0MjUxNzQzM2Y2NWRjZmIzMmIxYmFiYjFmZWMzMmRhNzEyNmE5ZjYifX19]
+    display name: <&c>You<&f>Tube
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Youtube de Collins & Kosuke"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+cetk_insta:
+    type: item
+    material: human_skull[skull_skin=acaae4ea-b8ee-45b6-b993-94d56a8e8a82|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWM4OGQ2MTYzZmFiZTdjNWU2MjQ1MGViMzdhMDc0ZTJlMmM4ODYxMWM5OTg1MzZkYmQ4NDI5ZmFhMDgxOTQ1MyJ9fX0=]
+    display name: <&e>I<&6>n<&c>s<&4>t<&5>a<&1>g<&9>r<&b>a<&a>m
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Instagram de Collins & Kosuke"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+    
+    
+#     #     #     #     #     #     #     #     #     #     #     #     #     #     #
+   
+#                                      ACTION                                       #
+
+#     #     #     #     #     #     #     #     #     #     #     #     #     #     #
+npc_cetk_menu_handler:
+    type: world
+    events:
+        on player clicks in cetk_menu:
+        - determine cancelled
+        on player drags in cetk_menu:
+        - determine cancelled
+        on player clicks cetk_twitter in cetk_menu:
+        - inventory close d:in@mary_menu
+        - narrate "<&8><&l>[<&9><&l>KMC<&8><&l>]<&r> <&6>Clique sur le lien pour aller sur le twitter de Collins & Kosuke <&a><&n>https://www.twitter.com/CollinsKosuke "
+        on player clicks cetk_youtube in cetk_menu:
+        - inventory close d:in@mary_menu
+        - narrate "<&8><&l>[<&9><&l>KMC<&8><&l>]<&r> <&6>Clique sur le lien pour aller sur la chaine de Collins & Kosuke <&a><&n>https://www.youtube.com/CollinsKosuke " 
+        on player clicks cetk_insta in cetk_menu:
+        - inventory close d:in@mary_menu
+        - narrate "<&8><&l>[<&9><&l>KMC<&8><&l>]<&r> <&6>Clique sur le lien pour aller sur l'instagram de Collins & Kosuke <&a><&n>https://www.instagram.com/collinskosuke/ "

@@ -1,0 +1,67 @@
+gamemode_menu:
+    type: inventory
+    debug: false
+    title: MP < Gamemode
+    size: 45
+    slots:
+    - "[i@gm_spawn_tp] [i@main_menu_vitre12] [] [] [] [] [] [i@main_menu_vitre13] [i@home_menu_item]"
+    - "[i@time_menu_item] [i@main_menu_vitre11] [] [i@gamemode_0] [] [i@gamemode_1] [] [i@main_menu_vitre14] [i@warp_menu_item]"
+    - "[i@gm_gamemode_menu_item] [i@main_menu_vitre15] [] [] [] [] [] [i@main_menu_vitre10] [i@world_menu_item]"
+    - "[i@main_menu_vitre1] [i@main_menu_vitre2] [i@main_menu_vitre3] [i@main_menu_vitre4] [i@main_menu_vitre5] [i@main_menu_vitre6] [i@main_menu_vitre7] [i@main_menu_vitre8] [i@main_menu_vitre9]"
+    - "[] [] [] [] [i@main_menu_fermer] [] [] [] []"
+##################################################################################################################################################################################################################
+gamemode_0:
+    type: item
+    material: human_skull[skull_skin=cc70838c-9905-4fad-865f-8a5f83430272|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzFhOTQ2M2ZkM2M0MzNkNWUxZDlmZWM2ZDVkNGIwOWE4M2E5NzBiMGI3NGRkNTQ2Y2U2N2E3MzM0OGNhYWIifX19]
+    display name: <&6>Survie
+gamemode_1:
+    type: item
+    material: human_skull[skull_skin=8d5350b9-6464-4f4b-999e-462af24dc872|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWNiNDE5ZDk4NGQ4Nzk2MzczYzk2NDYyMzNjN2EwMjY2NGJkMmNlM2ExZDM0NzZkZDliMWM1NDYzYjE0ZWJlIn19fQ==]
+    display name: <&6>Creatif
+    
+gm_spawn_tp:
+    type: item
+    material: end_crystal
+    display name: <&9>SPAWN
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation au SPAWN"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+
+gm_gamemode_menu_item:
+    type: item
+    material: redstone_comparator[enchantments=DURABILITY,0]
+    display name: <&9>Gamemode
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Ouvre le menu des"
+    - "<&e>Gamemodes"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+##################################################################################################################################################################################################################
+gm_main_menu_handler:
+    type: world
+    events:
+        on player clicks in gamemode_menu:
+        - determine cancelled
+        on player drags in gamemode_menu:
+        - determine cancelled
+        on player clicks main_menu_fermer in gamemode_menu:
+        - inventory close d:in@gamemode_menu
+        on player clicks gm_spawn_tp in gamemode_menu:
+        - execute as_player "spawn"
+        on player clicks time_menu_item in gamemode_menu:
+        - inventory open d:in@time_menu
+        on player clicks home_menu_item in gamemode_menu:
+        - inventory close d:in@gamemode_menu
+        - execute as_player "home"
+        on player clicks warp_menu_item in gamemode_menu:
+        - inventory open d:in@warp_menu
+        on player clicks world_menu_item in gamemode_menu:
+        - inventory open d:in@world_menu
+        on player clicks gamemode_0 in gamemode_menu:
+        - execute as_op "gamemode 0"
+        on player clicks gamemode_1 in gamemode_menu:
+        - execute as_op "gamemode 1"       
+##################################################################################################################################################################################################################

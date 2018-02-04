@@ -1,0 +1,38 @@
+denizen_reload_scripts:
+    type: command
+    debug: false
+    name: dreload
+    description: Lance le reload des scripts denizen
+    usage: /dreload
+    permission: denizencmds.reload
+    permission message: "<&c>Vous n'avez pas la permission d'utiliser cette commande"
+    allowed help:
+    - determine <player.has_permission>
+    script:
+        - execute as_op "denizen reload scripts"
+		
+denizen_debug_r:
+    type: command
+    debug: false
+    name: ddebugr
+    description: Lance le debug denizen
+    usage: /ddebugr
+    permission: denizencmds.debugr
+    permission message: "<&c>Vous n'avez pas la permission d'utiliser cette commande"
+    allowed help: 
+    - determine <player.has_permission>
+    script:
+        - execute as_op "denizen debug -r"
+		
+denizen_submit:
+    type: command
+    debug: false
+    name: dsub
+    description: Paste les logs de debug sur le site http://mcmonkey.org
+    usage: /dsub
+    permission: denizencmds.submit
+    permission message: "<&c>Vous n'avez pas la permission d'utiliser cette commande"
+    allowed help: 
+    - determine <player.has_permission>
+    script:
+        - execute as_op "denizen submit"

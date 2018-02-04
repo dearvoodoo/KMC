@@ -1,0 +1,148 @@
+time_menu:
+    type: inventory
+    debug: false
+    title: MP < Sables du temps
+    size: 45
+    slots:
+    - "[i@time_spawn_tp] [i@main_menu_vitre11] [i@time_0] [i@time_2] [i@time_4] [i@time_6] [i@time_8] [i@main_menu_vitre13] [i@home_menu_item]"
+    - "[i@time_time_menu_item] [i@main_menu_vitre15] [i@time_10] [i@time_12] [i@time_14] [i@time_16] [i@time_18] [i@main_menu_vitre14] [i@warp_menu_item]"
+    - "[i@gamemode_menu_item] [i@main_menu_vitre12] [i@time_reset01] [i@time_20] [i@time_22] [i@time_23] [i@time_reset02] [i@main_menu_vitre10] [i@world_menu_item]"
+    - "[i@main_menu_vitre1] [i@main_menu_vitre2] [i@main_menu_vitre3] [i@main_menu_vitre4] [i@main_menu_vitre5] [i@main_menu_vitre6] [i@main_menu_vitre7] [i@main_menu_vitre8] [i@main_menu_vitre9]"
+    - "[] [] [] [] [i@main_menu_fermer] [] [] [] []"
+##################################################################################################################################################################################################################
+time_spawn_tp:
+    type: item
+    material: end_crystal
+    display name: <&9>SPAWN
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation au SPAWN"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+
+time_time_menu_item:
+    type: item
+    material: watch[enchantments=DURABILITY,0]
+    display name: <&9>Sables du temps
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Ouvre le menu des"
+    - "<&e>Sables du Temps"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+time_0:
+    type: item
+    material: red_sand
+    display name: <&b>00:00
+time_2:
+    type: item
+    material: red_sand[quantity=2]
+    display name: <&b>02:00
+time_4:
+    type: item
+    material: red_sand[quantity=4]
+    display name: <&b>04:00
+time_6:
+    type: item
+    material: red_sand[quantity=6]
+    display name: <&b>06:00
+time_8:
+    type: item
+    material: sand[quantity=8]
+    display name: <&b>08:00
+time_10:
+    type: item
+    material: sand[quantity=10]
+    display name: <&b>10:00
+time_12:
+    type: item
+    material: sand[quantity=12]
+    display name: <&b>12:00
+time_14:
+    type: item
+    material: sand[quantity=14]
+    display name: <&b>14:00
+time_16:
+    type: item
+    material: sand[quantity=16]
+    display name: <&b>16:00
+time_18:
+    type: item
+    material: sand[quantity=18]
+    display name: <&b>18:00
+time_20:
+    type: item
+    material: red_sand[quantity=20]
+    display name: <&b>20:00
+time_22:
+    type: item
+    material: red_sand[quantity=22]
+    display name: <&b>22:00
+time_23:
+    type: item
+    material: red_sand[quantity=23]
+    display name: <&b>23:00
+time_reset01:
+    type: item
+    material: totem
+    display name: <&b>RESET LE TEMPS
+time_reset02:
+    type: item
+    material: totem
+    display name: <&b>RESET LE TEMPS
+
+
+##################################################################################################################################################################################################################
+time_main_menu_handler:
+    type: world
+    events:
+        on player clicks in time_menu:
+        - determine cancelled
+        on player drags in time_menu:
+        - determine cancelled
+        on player clicks main_menu_fermer in time_menu:
+        - inventory close d:in@time_menu
+        on player clicks time_spawn_tp in time_menu:
+        - execute as_player "spawn"
+        on player clicks gamemode_menu_item in time_menu:
+        - inventory open d:in@gamemode_menu
+        on player clicks home_menu_item in time_menu:
+        - inventory close d:in@time_menu
+        - execute as_player "home"
+        on player clicks warp_menu_item in time_menu:
+        - inventory open d:in@warp_menu
+        on player clicks world_menu_item in time_menu:
+        - inventory open d:in@world_menu
+
+        on player clicks time_0 in time_menu:
+        - execute as_player "ptime 00:00"
+        on player clicks time_2 in time_menu:
+        - execute as_player "ptime 02:00"
+        on player clicks time_4 in time_menu:
+        - execute as_player "ptime 04:00"
+        on player clicks time_6 in time_menu:
+        - execute as_player "ptime 06:00"
+        on player clicks time_8 in time_menu:
+        - execute as_player "ptime 08:00"
+        on player clicks time_10 in time_menu:
+        - execute as_player "ptime 10:00"
+        on player clicks time_12 in time_menu:
+        - execute as_player "ptime 12:00"
+        on player clicks time_14 in time_menu:
+        - execute as_player "ptime 14:00"
+        on player clicks time_16 in time_menu:
+        - execute as_player "ptime 16:00"
+        on player clicks time_18 in time_menu:
+        - execute as_player "ptime 18:00"
+        on player clicks time_20 in time_menu:
+        - execute as_player "ptime 20:00"
+        on player clicks time_22 in time_menu:
+        - execute as_player "ptime 22:00"
+        on player clicks time_23 in time_menu:
+        - execute as_player "ptime 23:00"
+        on player clicks time_reset01 in time_menu:
+        - execute as_player "ptime reset"
+        on player clicks time_reset02 in time_menu:
+        - execute as_player "ptime reset"
+                
+##################################################################################################################################################################################################################

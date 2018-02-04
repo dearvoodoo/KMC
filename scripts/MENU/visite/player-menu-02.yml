@@ -1,0 +1,225 @@
+# uuid ici: https://mcuuid.net/
+
+player_menu_02:
+    type: inventory
+    debug: false
+    title: MP < Visite
+    size: 45
+    slots:
+    - "[i@gm_spawn_tp] [i@main_menu_vitre12] [] [] [] [] [] [i@main_menu_vitre13] [i@home_menu_item]"
+    - "[i@time_menu_item] [i@main_menu_vitre11] [] [] [] [] [] [i@main_menu_vitre15] [i@warp_warp_menu_item]"
+    - "[i@gamemode_menu_item] [i@main_menu_vitre14] [] [] [] [] [] [i@main_menu_vitre10] [i@world_menu_item]"
+    - "[i@main_menu_vitre1] [i@main_menu_vitre2] [i@main_menu_vitre3] [i@main_menu_vitre4] [i@main_menu_vitre5] [i@main_menu_vitre6] [i@main_menu_vitre7] [i@main_menu_vitre8] [i@main_menu_vitre9]"
+    - "[] [] [] [i@01_back_arrow] [i@main_menu_fermer] [] [] [] [i@warp_players_item]"
+##################################################################################################################################################################################################################  
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+#pm_:
+#    type: item
+#    material: human_skull[skull_skin=]
+#    display name: <&9>
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&e>Teleportation sur le terrain de"
+#    - "<&e>"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+################################################################################################################################################################################################################## 
+01_back_arrow:
+    type: item
+    material: arrow
+    display name: <&e>Page Precedente
+##################################################################################################################################################################################################################
+player_menu_02_menu_handler:
+    type: world
+    events:
+        on player clicks in player_menu_02:
+        - determine cancelled
+        on player drags in player_menu_02:
+        - determine cancelled
+        on player clicks main_menu_fermer in player_menu_02:
+        - inventory close d:in@player_menu_02
+        on player clicks warp_spawn_tp in player_menu_02:
+        - execute as_player "spawn"
+        on player clicks time_menu_item in player_menu_02:
+        - inventory open d:in@time_menu
+        on player clicks home_menu_item in player_menu_02:
+        - inventory close d:in@player_menu_02
+        - execute as_player "home"
+        on player clicks world_menu_item in player_menu_02:
+        - inventory open d:in@world_menu
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit " 
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        #on player clicks pm_ in player_menu_02:
+        #- execute as_op "plot visit "
+        
+
+        on player clicks 01_back_arrow in player_menu_02:
+        - inventory open d:in@player_menu_01
+        on player clicks warp_players_item in player_menu_02:
+        - determine cancelled
+##################################################################################################################################################################################################################

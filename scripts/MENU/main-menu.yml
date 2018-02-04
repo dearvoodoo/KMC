@@ -1,0 +1,183 @@
+main_menu:
+    type: inventory
+    debug: false
+    title: Menu principal
+    size: 45
+    slots:
+    - "[i@spawn_tp] [i@main_menu_vitre15] [] [] [] [] [] [i@main_menu_vitre13] [i@home_menu_item]"
+    - "[i@time_menu_item] [i@main_menu_vitre11] [] [i@K] [i@M] [i@C] [] [i@main_menu_vitre14] [i@warp_menu_item]"
+    - "[i@gamemode_menu_item] [i@main_menu_vitre12] [] [] [] [] [] [i@main_menu_vitre10] [i@world_menu_item]"
+    - "[i@main_menu_vitre1] [i@main_menu_vitre2] [i@main_menu_vitre3] [i@main_menu_vitre4] [i@main_menu_vitre5] [i@main_menu_vitre6] [i@main_menu_vitre7] [i@main_menu_vitre8] [i@main_menu_vitre9]"
+    - "[] [] [] [] [i@main_menu_fermer] [] [] [] []"
+##################################################################################################################################################################################################################
+spawn_tp:
+    type: item
+    material: end_crystal[enchantments=DURABILITY,0]
+    display name: <&9>SPAWN
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation au SPAWN"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+
+time_menu_item:
+    type: item
+    material: watch
+    display name: <&9>Sables du temps
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Ouvre le menu des"
+    - "<&e>Sables du Temps"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+
+gamemode_menu_item:
+    type: item
+    material: redstone_comparator
+    display name: <&9>Gamemode
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Ouvre le menu des"
+    - "<&e>Gamemodes"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+home_menu_item:
+    type: item
+    material: bed,14
+    display name: <&9>HOME
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Vous tp a votre"
+    - "<&e>Home"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+warp_menu_item:
+    type: item
+    material: ender_pearl
+    display name: <&9>Visite
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Ouvre le menu de la"
+    - "<&e>Visite"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+world_menu_item:
+    type: item
+    material: human_skull[skull_skin=6461582f-e959-406b-9b33-b004a7d3c171|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTBlNTU1ZTQyYTFiMmY4NWVmMmQ3NTY2ODI1NzY3NmJjM2I0ZDRmOWFkODhhZjQxODlmMWY1NjJjZDM5MzQzIn19fQ==]
+    display name: <&9>Mondes
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Ouvre le menu des"
+    - "<&e>Mondes"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+K:
+    type: item
+    material: human_skull[skull_skin=4f264d8d-87a3-496a-ad1d-eda0a22a30f0|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTQ2MWIzOGM4ZTQ1NzgyYWRhNTlkMTYxMzJhNDIyMmMxOTM3NzhlN2Q3MGM0NTQyYzk1MzYzNzZmMzdiZTQyIn19fQ==]
+    display name: <&b>Kosuke
+M:
+    type: item
+    material: human_skull[skull_skin=a291bc00-e8d7-42cf-8d57-588291f3ebc2|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDljNDVhMjRhYWFiZjQ5ZTIxN2MxNTQ4MzIwNDg0OGE3MzU4MmFiYTdmYWUxMGVlMmM1N2JkYjc2NDgyZiJ9fX0=]
+    display name: <&b>Mary
+C:
+    type: item
+    material: human_skull[skull_skin=db8ddc48-84d7-4f98-bce3-0fb2d43cd4dd|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWJlOTgzZWM0NzgwMjRlYzZmZDA0NmZjZGZhNDg0MjY3NjkzOTU1MWI0NzM1MDQ0N2M3N2MxM2FmMThlNmYifX19]
+    display name: <&b>Collins
+##################################################################################################################################################################################################################
+main_menu_fermer:
+    type: item
+    material: barrier
+    display name: <&c><&l>Fermer
+##################################################################################################################################################################################################################
+main_menu_handler:
+    type: world
+    events:
+        on player clicks in main_menu:
+        - determine cancelled
+        on player drags in main_menu:
+        - determine cancelled
+        on player clicks main_menu_fermer in main_menu:
+        - inventory close d:in@main_menu
+        on player clicks spawn_tp in main_menu:
+        - execute as_player "spawn"
+        on player clicks time_menu_item in main_menu:
+        - inventory open d:in@time_menu
+        on player clicks gamemode_menu_item in main_menu:
+        - inventory open d:in@gamemode_menu
+        on player clicks home_menu_item in main_menu:
+        - inventory close d:in@main_menu
+        - execute as_player "home"
+        on player clicks warp_menu_item in main_menu:
+        - inventory open d:in@warp_menu
+        on player clicks world_menu_item in main_menu:
+        - inventory open d:in@world_menu
+        on player clicks K in main_menu:
+        - narrate "<&8><&l>[<&9><&l>KMC<&8><&l>]<&r> <&6>Clique sur le lien pour aller sur la chaine de Collins&Kosuke <&a><&n>https://www.youtube.com/collins&kosuke "
+        on player clicks M in main_menu:
+        - narrate "<&8><&l>[<&9><&l>KMC<&8><&l>]<&r> <&6>Clique sur le lien pour aller sur la chaine de Mary <&a><&n>https://www.youtube.com/user/teddymint3 "  
+        on player clicks C in main_menu:
+        - narrate "<&8><&l>[<&9><&l>KMC<&8><&l>]<&r> <&6>Clique sur le lien pour aller sur la chaine de Collins&Kosuke <&a><&n>https://www.youtube.com/collins&kosuke " 
+        on player right clicks with compass:
+        - inventory open d:in@main_menu        
+##################################################################################################################################################################################################################
+main_menu_vitre1:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&4>-
+main_menu_vitre2:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&c>-
+main_menu_vitre3:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&6>-
+main_menu_vitre4:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&e>-
+main_menu_vitre5:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&2>-
+main_menu_vitre6:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&a>-
+main_menu_vitre7:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&b>-
+main_menu_vitre8:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&3>-
+main_menu_vitre9:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&1>-
+main_menu_vitre10:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&c>-
+main_menu_vitre11:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&c>-
+main_menu_vitre12:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&c>-
+main_menu_vitre13:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&3>-
+main_menu_vitre14:
+    type: item
+    material: gray_stained_glass_pane
+    display name: <&3>-
+main_menu_vitre15:
+    type: item
+    material: green_stained_glass_pane
+    display name: <&3>-
+##################################################################################################################################################################################################################

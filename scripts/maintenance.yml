@@ -1,0 +1,47 @@
+maintnenace_kick:
+    type: world
+    debug: false
+    events:
+        on player join:
+#Mettre la perm denizen.maintenance.bypass pour que le joueur (non op) arrive a co pendant la maintenance
+        - if <player.is_op> && <server.has_flag[maintenance]> {
+            - wait 1
+            - narrate "<&4>Le serveur est en Maintenance."
+            - queue clear
+            }
+            else if <player.has_permission[denizen.maintenance.bypass]> && <server.has_flag[maintenance]> {
+            - wait 1
+            - narrate "<&4>Le serveur est en Maintenance."
+            - queue clear
+            }
+            else if <server.has_flag[maintenance]> {
+            - wait 10t
+            - execute as_server "kick <player.name> <&c>Serveur en cours de maintenance, revenez plus tard. + d'info sur <&6>Discord"
+            - queue clear
+            }
+maintenance_command:
+    type: command
+    debug: false
+    name: maintenance
+    description: Mettre le serveur en maintenance
+    usage: /maintenance
+    permission: denizen.maintenance
+    permission message: "<&c>Désolé vous n'avez pas la permission de mettre le serveur en maintenance."
+    allowed help:
+    - determine <player.has_permission[denizen.maintenance]>
+    script:
+#Mettre la perm denizen.maintenance pour que le joueur (non op) arrive a faire la commande /maintenance
+    - if !<player.has_permission[denizen.maintenance]||<context.server>> {
+        - narrate "Désolé vous n'avez pas la permission de mettre le serveur en maintenance."
+        - queue clear
+        }
+        else if !<server.has_flag[maintenance]> {
+        - flag server maintenance
+        - narrate "<&4>Le mode de maintenance est activé!"
+        - queue clear
+        }
+        else if <server.has_flag[maintenance]> {
+        - flag server maintenance:!
+        - narrate "<&2>Le mode de maintenance est désactivé!"
+        - queue clear
+        }

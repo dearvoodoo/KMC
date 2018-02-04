@@ -1,0 +1,224 @@
+# uuid ici: https://mcuuid.net/
+
+player_menu_01:
+    type: inventory
+    debug: true
+    title: MP < Visite < Plots
+    size: 45
+    slots:
+    - "[i@gm_spawn_tp] [i@main_menu_vitre12] [i@pm_kosuuke] [i@pm_collins147] [i@pm_maryharper] [i@pm_voodoo] [i@pm_darylia] [i@main_menu_vitre13] [i@home_menu_item]"
+    - "[i@time_menu_item] [i@main_menu_vitre11] [i@pm_cebouh] [i@pm_raph] [i@pm_bart] [i@pm_camelote] [i@pm_shurikn] [i@main_menu_vitre15] [i@warp_warp_menu_item]"
+    - "[i@gamemode_menu_item] [i@main_menu_vitre14] [i@pm_noctyboy] [i@pm_napsta] [i@pm_ippikiookami59] [i@pm_colomousse] [i@pm_C4RRYME] [i@main_menu_vitre10] [i@world_menu_item]"
+    - "[i@main_menu_vitre1] [i@main_menu_vitre2] [i@main_menu_vitre3] [i@main_menu_vitre4] [i@main_menu_vitre5] [i@main_menu_vitre6] [i@main_menu_vitre7] [i@main_menu_vitre8] [i@main_menu_vitre9]"
+    - "[] [] [] [] [i@main_menu_fermer] [i@pm02_arrow] [] [] [i@warp_players_item]"
+##################################################################################################################################################################################################################  
+pm_kosuuke:
+    type: item
+    material: human_skull[skull_skin=02b9eb3e-c655-4c74-a608-2535730b78aa]
+    display name: <&4>Kosuuke
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>Kosuuke"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_collins147:
+    type: item
+    material: human_skull[skull_skin=72e1d53d-8daa-410d-a0d1-b9dd4204d440]
+    display name: <&4>Collins147
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>Collins147"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_maryharper:
+    type: item
+    material: human_skull[skull_skin=073fda6b-df9a-4b8d-8633-74b7c89d6024]
+    display name: <&4>maryharper
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>maryharper"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_voodoo:
+    type: item
+    material: human_skull[skull_skin=fb370f5d-a3f3-47ee-82bb-1dc57df8b31b]
+    display name: <&c>VooDoo
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>VooDoo"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_darylia:
+    type: item
+    material: human_skull[skull_skin=b4d80630-f7dd-472c-a624-9414681014b0]
+    display name: <&9>Darylia
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>Darylia"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_cebouh:
+    type: item
+    material: human_skull[skull_skin=e80b1052-6b88-447e-8175-5bd724f99752]
+    display name: <&9>Noubette
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>Noubette"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_raph:
+    type: item
+    material: human_skull[skull_skin=1146dd33-b4f3-4b0d-8bbc-4e95a5d92a27]
+    display name: <&9>Fallens_Archent
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>Fallens_Archent"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_bart:
+    type: item
+    material: human_skull[skull_skin=036c93c4-8c7f-49a0-a95a-407335316372]
+    display name: <&9>Bart1163
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>Bart1163"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_camelote:
+    type: item
+    material: human_skull[skull_skin=7afe1c54-a7e5-45c6-a6ec-493c00a379cd]
+    display name: <&9>Camelote
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>Camelote"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_shurikn:
+    type: item
+    material: human_skull[skull_skin=202a215b-7291-46d6-9c8a-c73178e8f686]
+    display name: <&9>ShurikN_
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>ShurikN_"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_noctyboy:
+    type: item
+    material: human_skull[skull_skin=8eebee24-606d-4188-9b90-2dfbb38fb7ff]
+    display name: <&a>noctyboy
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>noctyboy"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_napsta:
+    type: item
+    material: human_skull[skull_skin=ce052345-ecfd-4309-bb54-2a587c04d557]
+    display name: <&a>LordNapstablook
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>LordNapstablook"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_ippikiookami59:
+    type: item
+    material: human_skull[skull_skin=6ffbf230-f155-481c-898f-5761da0c2c4f]
+    display name: <&a>ippikiookami59
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>ippikiookami59"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_colomousse:
+    type: item
+    material: human_skull[skull_skin=d40b73f5-e9da-4bf1-a984-98b82fd08b9b]
+    display name: <&a>Colomousse
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>Colomousse"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+pm_C4RRYME:
+    type: item
+    material: human_skull[skull_skin=1eb36c98-6819-4cc0-9453-e88ae0ac7e50]
+    display name: <&a>C4RRYME
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation sur le terrain de"
+    - "<&e>C4RRYME"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+################################################################################################################################################################################################################## 
+pm02_arrow:
+    type: item
+    material: arrow
+    display name: <&e>Page Suivante
+##################################################################################################################################################################################################################
+player_menu_01_menu_handler:
+    type: world
+    events:
+        on player clicks in player_menu_01:
+        - determine cancelled
+        on player drags in player_menu_01:
+        - determine cancelled
+        on player clicks main_menu_fermer in player_menu_01:
+        - inventory close d:in@player_menu_01
+        on player clicks warp_spawn_tp in player_menu_01:
+        - execute as_player "spawn"
+        on player clicks time_menu_item in player_menu_01:
+        - inventory open d:in@time_menu
+        on player clicks home_menu_item in player_menu_01:
+        - inventory close d:in@player_menu_01
+        - execute as_player "home"
+        on player clicks world_menu_item in player_menu_01:
+        - inventory open d:in@world_menu
+        on player clicks pm_kosuuke in player_menu_01:
+        - execute as_op "plot visit 0;1"
+        on player clicks pm_collins147 in player_menu_01:
+        - execute as_op "plot visit 0;1"
+        on player clicks pm_maryharper in player_menu_01:
+        - execute as_op "plot visit 0;1"
+        on player clicks pm_voodoo in player_menu_01:
+        - execute as_op "plot visit VooDoo__"
+        on player clicks pm_darylia in player_menu_01:
+        - execute as_op "plot visit Darylia"
+        on player clicks pm_cebouh in player_menu_01:
+        - execute as_op "plot visit Cebouh"
+        on player clicks pm_raph in player_menu_01:
+        - execute as_op "plot visit Fallens_Archent" 
+        on player clicks pm_bart in player_menu_01:
+        - execute as_op "plot visit Bart1163"
+        on player clicks pm_camelote in player_menu_01:
+        - execute as_op "plot visit camelote"
+        on player clicks pm_shurikn in player_menu_01:
+        - execute as_op "plot visit ShurikN_"
+        on player clicks pm_noctyboy in player_menu_01:
+        - execute as_op "plot visit noctyboy"
+        on player clicks pm_napsta in player_menu_01:
+        - execute as_op "plot visit LordNapstablook"
+        on player clicks pm_ippikiookami59 in player_menu_01:
+        - execute as_op "plot visit ippikiookami59"
+        on player clicks pm_colomousse in player_menu_01:
+        - execute as_op "plot visit colomousse"
+        on player clicks pm_C4RRYME in player_menu_01:
+        - execute as_op "plot visit C4RRYME"
+
+        on player clicks pm02_arrow in player_menu_01:
+        - inventory open d:in@player_menu_02
+        on player clicks warp_players_item in player_menu_01:
+        - determine cancelled
+##################################################################################################################################################################################################################

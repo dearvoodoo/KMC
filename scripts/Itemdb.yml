@@ -1,0 +1,15 @@
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+# Faire la commande "/itemdb" pour avoir le nom de l'item, l'ID, le data, la commande de give et le dItem   #
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+Itemdb Command: 
+  type: world
+  events: 
+    on itemdb command:
+    - ^if !<player.is_op> {
+      - ^narrate "<&f>You must be op to use this command."
+      - determine fulfilled
+      - queue clear
+      }
+    - ^narrate "Item<&co> <&e><player.item_in_hand.material.bukkit_enum.to_lowercase><&r> Itemid<&co> <&e><player.item_in_hand.material.id><&co><player.item_in_hand.material.data> <&7>(/give <&lt>player<&gt> <player.item_in_hand.material.id> <&lt>#<&gt> <player.item_in_hand.material.data>))"
+    - ^narrate "<&f>Raw data<&co> <player.item_in_hand>"
+    - determine fulfilled

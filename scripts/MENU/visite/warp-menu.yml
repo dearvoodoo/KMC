@@ -1,0 +1,66 @@
+warp_menu:
+    type: inventory
+    debug: false
+    title: MP < Visite
+    size: 45
+    slots:
+    - "[i@gm_spawn_tp] [i@main_menu_vitre12] [] [] [] [] [] [i@main_menu_vitre13] [i@home_menu_item]"
+    - "[i@time_menu_item] [i@main_menu_vitre11] [] [] [] [] [] [i@main_menu_vitre15] [i@warp_warp_menu_item]"
+    - "[i@gamemode_menu_item] [i@main_menu_vitre14] [] [] [] [] [] [i@main_menu_vitre10] [i@world_menu_item]"
+    - "[i@main_menu_vitre1] [i@main_menu_vitre2] [i@main_menu_vitre3] [i@main_menu_vitre4] [i@main_menu_vitre5] [i@main_menu_vitre6] [i@main_menu_vitre7] [i@main_menu_vitre8] [i@main_menu_vitre9]"
+    - "[] [] [] [] [i@main_menu_fermer] [] [] [] [i@warp_players_item]"
+##################################################################################################################################################################################################################    
+warp_spawn_tp:
+    type: item
+    material: end_crystal
+    display name: <&9>SPAWN
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation au SPAWN"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+
+warp_warp_menu_item:
+    type: item
+    material: ender_pearl[enchantments=DURABILITY,0]
+    display name: <&9>Visite
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Ouvre le menu de la"
+    - "<&e>Visite"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+##################################################################################################################################################################################################################  
+warp_players_item:
+    type: item
+    material: human_skull[skull_skin=<player.UUID>]
+    display name: <&6>Joueurs
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Liste des bases de Joueurs"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+##################################################################################################################################################################################################################
+warp_main_menu_handler:
+    type: world
+    events:
+        on player clicks in warp_menu:
+        - determine cancelled
+        on player drags in warp_menu:
+        - determine cancelled
+        on player clicks main_menu_fermer in warp_menu:
+        - inventory close d:in@warp_menu
+        on player clicks warp_spawn_tp in warp_menu:
+        - execute as_player "spawn"
+        on player clicks time_menu_item in warp_menu:
+        - inventory open d:in@time_menu
+        on player clicks home_menu_item in warp_menu:
+        - inventory close d:in@warp_menu
+        - execute as_player "home"
+        on player clicks world_menu_item in warp_menu:
+        - inventory open d:in@world_menu   
+
+
+        on player clicks warp_players_item in warp_menu:
+        - inventory open d:in@player_menu_01
+##################################################################################################################################################################################################################

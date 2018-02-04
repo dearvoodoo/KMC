@@ -1,0 +1,99 @@
+world_menu:
+    type: inventory
+    debug: false
+    title: MP < Mondes
+    size: 45
+    slots:
+    - "[i@wd_spawn_tp] [i@main_menu_vitre12] [] [i@creative_nether] [i@creative_overworld] [i@creative_end] [] [i@main_menu_vitre13] [i@home_menu_item]"
+    - "[i@time_menu_item] [i@main_menu_vitre11] [] [] [] [] [] [i@main_menu_vitre14] [i@warp_menu_item]"
+    - "[i@gamemode_menu_item] [i@main_menu_vitre10] [] [] [] [] [] [i@main_menu_vitre15] [i@wd_world_menu_item]"
+    - "[i@main_menu_vitre1] [i@main_menu_vitre2] [i@main_menu_vitre3] [i@main_menu_vitre4] [i@main_menu_vitre5] [i@main_menu_vitre6] [i@main_menu_vitre7] [i@main_menu_vitre8] [i@main_menu_vitre9]"
+    - "[] [] [] [] [i@main_menu_fermer] [] [] [] []"
+##################################################################################################################################################################################################################
+creative_overworld:
+    type: item
+    material: human_skull[skull_skin=6461582f-e959-406b-9b33-b004a7d3c171|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTBlNTU1ZTQyYTFiMmY4NWVmMmQ3NTY2ODI1NzY3NmJjM2I0ZDRmOWFkODhhZjQxODlmMWY1NjJjZDM5MzQzIn19fQ==]
+    display name: <&6>Creatif
+    lore:
+    - "<&8>-----------------------"
+    - "<&b><&l>OVERWORLD"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+creative_nether:
+    type: item
+    material: human_skull[skull_skin=e3d53668-b3ef-49b4-845e-00bb8cafe584|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE2OWNjZjdhZDkwNGM5YTg1MmVhMmZmM2Y1YjRlMjNhZGViZjcyZWQxMmQ1ZjI0Yjc4Y2UyZDQ0YjRhMiJ9fX0=]
+    display name: <&6>Creatif
+    lore:
+    - "<&8>-----------------------"
+    - "<&c><&l>NETHER"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+creative_end:
+    type: item
+    material: human_skull[skull_skin=f72e327c-47a2-4570-bab8-ae94807109f3|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODdjZjIxY2NiMjFlMmQyOWM4MWNjMTVmZThkM2IzZWY5NzFkMTgyZDMyMjRhMjEyOTY0ZGRkYjM2Y2Y0In19fQ==]
+    display name: <&6>Creatif
+    lore:
+    - "<&8>-----------------------"
+    - "<&5><&l>END"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+#survival:
+#    type: item
+#    material: human_skull[skull_skin=6461582f-e959-406b-9b33-b004a7d3c171|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTBlNTU1ZTQyYTFiMmY4NWVmMmQ3NTY2ODI1NzY3NmJjM2I0ZDRmOWFkODhhZjQxODlmMWY1NjJjZDM5MzQzIn19fQ==]
+#    display name: <&6>Survival
+#    lore:
+#    - "<&8>-----------------------"
+#    - "<&b><&l>OVERWORLD"
+#    - "<&8>-----------------------"
+#    - "<&9>Clique sur moi"
+    
+wd_spawn_tp:
+    type: item
+    material: end_crystal
+    display name: <&9>SPAWN
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Teleportation au SPAWN"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+
+wd_world_menu_item:
+    type: item
+    material: human_skull[skull_skin=6461582f-e959-406b-9b33-b004a7d3c171|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTBlNTU1ZTQyYTFiMmY4NWVmMmQ3NTY2ODI1NzY3NmJjM2I0ZDRmOWFkODhhZjQxODlmMWY1NjJjZDM5MzQzIn19fQ==][enchantments=DURABILITY,0]
+    display name: <&9>Mondes
+    lore:
+    - "<&8>-----------------------"
+    - "<&e>Ouvre le menu des"
+    - "<&e>Mondes"
+    - "<&8>-----------------------"
+    - "<&9>Clique sur moi"
+##################################################################################################################################################################################################################
+wd_main_menu_handler:
+    type: world
+    events:
+        on player clicks in world_menu:
+        - determine cancelled
+        on player drags in world_menu:
+        - determine cancelled
+        on player clicks main_menu_fermer in world_menu:
+        - inventory close d:in@world_menu
+        on player clicks wd_spawn_tp in world_menu:
+        - execute as_player "spawn"
+        on player clicks time_menu_item in world_menu:
+        - inventory open d:in@time_menu
+        on player clicks gamemode_menu_item in world_menu:
+        - inventory open d:in@gamemode_menu
+        on player clicks home_menu_item in world_menu:
+        - inventory close d:in@world_menu
+        - execute as_player "home"
+        on player clicks warp_menu_item in world_menu:
+        - inventory open d:in@warp_menu
+        on player clicks creative_overworld in world_menu:
+        - execute as_op "mvtp KMC-World"
+        on player clicks creative_nether in world_menu:
+        - execute as_op "mvtp KMC-World_nether" 
+        on player clicks creative_end in world_menu:
+        - execute as_op "mvtp KMC-World_the_end"     
+#        on player clicks survival in world_menu:
+#        - execute as_op "mvtp survival"      
+##################################################################################################################################################################################################################

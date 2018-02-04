@@ -1,0 +1,20 @@
+npc_help_menu:
+    type: assignment
+    debug: false
+    actions:
+        on assignment:
+        - trigger name:chat toggle:true
+        - trigger name:click toggle:true
+        - trigger name:damage toggle:false
+		
+        on click:
+        - narrate "<&8><&m><&l>==========<&9><&m><&l>======<&3><&m><&l>=============<&9><&m><&l>======<&8><&m><&l>=========="
+        - narrate "<&e><&l>                        Besoin d'aide"
+        - narrate "<&8><&m><&l>==========<&9><&m><&l>======<&3><&m><&l>=============<&9><&m><&l>======<&8><&m><&l>=========="
+        - narrate "<&7>Pour un terrain ? <&e>/help-plot"
+        - narrate "<&7>Pour le menu ? <&e>/help-menu"
+        - narrate "<&7>Pour la liste des commandes ? <&e>/help-commands"
+        - narrate "<&7>Pour le reglement ? <&e>/regles"
+        - narrate "<&7>"
+        - narrate "<&7>"
+        - narrate "<&7>"

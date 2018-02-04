@@ -1,0 +1,20 @@
+# /npc assign --set npc_menu
+
+
+#     #     #     #     #     #     #     #     #     #     #     #     #     #     #
+   
+#                                        NPC                                        #
+
+#     #     #     #     #     #     #     #     #     #     #     #     #     #     #
+
+npc_menu:
+    type: assignment
+    debug: false
+    actions:
+        on assignment:
+        - trigger name:chat toggle:true
+        - trigger name:click toggle:true
+        - trigger name:damage toggle:false
+		
+        on click:
+        - inventory open d:in@main_menu
