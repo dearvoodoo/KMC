@@ -1,11 +1,10 @@
-# /npc assign --set npc_menu
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+#                                                                                                           #
+#                                                VOODOO SCRIPT                                              #
+#                                                                                                           #
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
 
-
-#     #     #     #     #     #     #     #     #     #     #     #     #     #     #
-   
-#                                        NPC                                        #
-
-#     #     #     #     #     #     #     #     #     #     #     #     #     #     #
+# Faire la commande /npc assign --set <nom_du_script_assignment>
 
 npc_menu:
     type: assignment
