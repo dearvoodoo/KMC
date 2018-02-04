@@ -1,9 +1,15 @@
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+#                                                                                                           #
+#                                                VOODOO SCRIPT                                              #
+#                                                                                                           #
+#   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   #
+
 maintnenace_kick:
     type: world
     debug: false
     events:
         on player join:
-#Mettre la perm denizen.maintenance.bypass pour que le joueur (non op) arrive a co pendant la maintenance
+#Mettre la perm denizen.maintenance.bypass pour que le joueur (non op) arrive à co pendant la maintenance
         - if <player.is_op> && <server.has_flag[maintenance]> {
             - wait 1
             - narrate "<&4>Le serveur est en Maintenance."
